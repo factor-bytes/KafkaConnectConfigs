@@ -1,0 +1,22 @@
+Sample JDBC source connector for kafka connect in incrementing mode
+ - SampleId is the PrimaryKey in source table
+
+{
+  "name": "sourceconnectorname",  
+  "config": {
+	"connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+	"tasks.max":1,
+	"connection.url":"jdbc:sqlserver:http://localhost:1433;database=;username=;password=",
+	"schema.pattern":"dbo",
+	"topic.prefix":"source-",
+	"topic.creation.enable":"true",
+	"topic.creation.default.replication.factor":"3",
+	"topic.creation.default.partitions":"1",
+	"mode":"incrementing",
+	"table.types":"TABLE",
+	"table.whitelist":"sample",
+	"incrementing.column.name":"SampleId",
+	"batch.max.rows":"5000",
+	"poll.bulk.interval.ms":"100"
+ }
+}
