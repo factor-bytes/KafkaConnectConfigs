@@ -1,4 +1,4 @@
-Sample JDBC sing connector basic configurations.
+Sample JDBC sink connector basic configurations.
 
 	{
 	  "name": "sinkconn",  
