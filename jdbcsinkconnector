@@ -1,0 +1,17 @@
+Sample JDBC sing connector basic configurations.
+
+	{
+	  "name": "sinkconn",  
+	  "config": {
+		"connector.class":"io.confluent.connect.jdbc.JdbcSinkConnector",
+		"tasks.max":1,
+		"connection.url":"jdbc:sqlserver://localhost:1433;database=;username=;password=",
+		"topics":"topic-to-read-messages-from",
+		"schema.pattern":"dbo",
+		"table.name.format":"destinationtablename",
+                "insert.mode":"upsert"
+		"pk.mode":"record_key",
+                "pk.fields":"IdField"
+		"auto.create":"true"
+	  }
+	}
