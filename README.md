@@ -1,2 +1,2 @@
 # Kafka
-Repo for Kafka Configurations
+Repository for Kafka and Kafka Connect Configurations
